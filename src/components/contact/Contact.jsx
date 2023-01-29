@@ -1,7 +1,7 @@
 import React from "react";
 import "./contact.css";
 import { MdOutlineEmail } from "react-icons/md";
-import { RiMessengerLine, RiWhatsappLine } from "react-icons/ri";
+import { RiMessengerLine, RiPhoneLine } from "react-icons/ri";
 
 const Contact = () => {
   return (
@@ -13,24 +13,32 @@ const Contact = () => {
           <article className="contact__option">
             <MdOutlineEmail className="contact__option-icon" />
             <h4>Email</h4>
-            <h5>dummy@gmail.com</h5>
-            <a href="mailto:Waragorn.T@outlook.com" target="_blank" rel="noreferrer">
+            <h5>Waragorn.T@outlook.com</h5>
+            <a
+              href="mailto:Waragorn.T@outlook.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               Send a message
             </a>
           </article>
           <article className="contact__option">
             <RiMessengerLine className="contact__option-icon" />
             <h4>Messenger</h4>
-            <h5>dummyuser</h5>
-            <a href="https://m.me/dummy" target="_blank" rel="noreferrer">
+            <h5>Waragorn Thammasiri</h5>
+            <a
+              href="https://m.me/tam.waragorn"
+              target="_blank"
+              rel="noreferrer"
+            >
               Send a message
             </a>
           </article>
           <article className="contact__option">
-            <RiWhatsappLine className="contact__option-icon" />
-            <h4>WhatsApp</h4>
-            <h5>+123456789</h5>
-            <a href="https://api.whatsapp.com" target="_blank" rel="noreferrer">
+            <RiPhoneLine className="contact__option-icon" />
+            <h4>Phone</h4>
+            <h5>+66 964233977</h5>
+            <a href="tel:+66964233977" target="_blank" rel="noreferrer">
               Send a message
             </a>
           </article>

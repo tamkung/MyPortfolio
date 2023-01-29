@@ -1,12 +1,12 @@
 import React from "react";
-import "./services.css";
+import "./tools.css";
 import { BiCheck } from "react-icons/bi";
 
-const Services = () => {
+const Tools = () => {
   return (
-    <section id="services">
+    <section id="tools">
       <h5>What I Offer</h5>
-      <h2>Services</h2>
+      <h2>Tools</h2>
       <div className="container services__container">
         <article className="service">
           <div className="service__head">
@@ -74,4 +74,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Tools;

@@ -5,7 +5,17 @@ import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer>
-      <a href="#home" className="footer__logo">
+      <div className="footer__copyright">
+        {/* <small>&copy; Egator Tutorials. All rights reserved.</small> */}
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
+
+/*
+<a href="#home" className="footer__logo">
         DUMMY
       </a>
       <ul className="permalinks">
@@ -24,9 +34,9 @@ const Footer = () => {
         <li>
           <a href="#portfolio">Portfolio</a>
         </li>
-        {/* <li>
+        <li>
           <a href="#testimonials">Testimonials</a>
-        </li> */}
+        </li> 
         <li>
           <a href="#contact">Contact</a>
         </li>
@@ -42,11 +52,4 @@ const Footer = () => {
           <FaTwitter />
         </a>
       </div>
-      <div className="footer__copyright">
-        <small>&copy; Egator Tutorials. All rights reserved.</small>
-      </div>
-    </footer>
-  );
-};
-
-export default Footer;
+*/

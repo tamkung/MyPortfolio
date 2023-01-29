@@ -38,9 +38,6 @@ const About = () => {
             expedita. Similique laborum deleniti tempora fuga quibusdam
             nesciunt, non amet soluta consequatur expedita alias.
           </p>
-          <a href="#contact" className="btn btn-primary">
-            Let's Talk
-          </a>
         </div>
       </div>
     </section>
