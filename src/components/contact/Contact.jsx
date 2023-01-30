@@ -3,6 +3,7 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import emailjs from "emailjs-com";
+import Swal from "sweetalert2";
 
 import "./contact.css";
 import { MdOutlineEmail } from "react-icons/md";
@@ -17,13 +18,18 @@ const Contact = () => {
       .email("Invalid email address")
       .required("Email is required"),
     message: Yup.string()
-      .min(1, "Message must be at least 10 characters")
+      .min(10, "Message must be at least 10 characters")
       .required("Message is required"),
   });
 
   const handleSubmit = (values, { setSubmitting }) => {
     console.log(values);
-    alert("ฟังก์ชันนี้ยังไม่เปิดใช้งาน");
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'ฟังก์ชันนี้ยังไม่เปิดใช้งาน',
+    })
+    setSubmitting(false);
     // emailjs
     //   .send("service_ebdrg8i", "template_6f3tn38", {
     //     to_email: values.email,
@@ -60,7 +66,7 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <h5>Get In Touch</h5>
+      {/* <h5>Get In Touch</h5> */}
       <h2>Contact Me</h2>
       <div className="container contact__container">
         <div className="contact__options">
@@ -99,7 +105,7 @@ const Contact = () => {
         </div>
         <Formik
           initialValues={{ name: "", email: "", message: "" }}
-          validationSchema={validationSchema}
+          //validationSchema={validationSchema}
           onSubmit={handleSubmit}
         >
           {({ isSubmitting }) => (
@@ -108,20 +114,20 @@ const Contact = () => {
                 type="text"
                 name="name"
                 placeholder="Your Full Name"
-                required
+                //required
               />
               <Field
                 type="email"
                 name="email"
                 placeholder="Your Email"
-                required
+                //required
               />
               <Field
                 as="textarea"
                 name="message"
                 rows="7"
                 placeholder="Your Message"
-                required
+                //required
               />
               <button
                 type="submit"

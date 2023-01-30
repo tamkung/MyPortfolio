@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./nav.css";
 import { BiHome, BiUser, BiBook, BiMessageSquareDetail } from "react-icons/bi";
-import { RiToolsFill } from "react-icons/ri";
+import { RiToolsFill, RiFolderUserLine } from "react-icons/ri";
 
 const Nav = () => {
   const [activeNav, setActiveNav] = useState("#home");
@@ -30,12 +30,19 @@ const Nav = () => {
       >
         <BiBook />
       </a>
-      <a
+      {/* <a
         href="#tools"
         onClick={() => setActiveNav("#tools")}
         className={activeNav === "#tools" ? "active" : ""}
       >
         <RiToolsFill />
+      </a> */}
+      <a
+        href="#portfolio"
+        onClick={() => setActiveNav("#portfolio")}
+        className={activeNav === "#portfolio" ? "active" : ""}
+      >
+        <RiFolderUserLine />
       </a>
       <a
         href="#contact"

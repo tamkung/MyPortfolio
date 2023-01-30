@@ -7,6 +7,7 @@ import Tools from "./components/tools/Tools";
 import Portfolio from "./components/portfolio/Portfolio";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
+import Certificate from "./components/certificate/Certificate";
 
 const App = () => {
   return (
@@ -15,8 +16,9 @@ const App = () => {
       <Nav />
       <About />
       <Experience />
-      <Tools />
+      {/* <Tools /> */}
       <Portfolio />
+      <Certificate />
       <Contact />
       <Footer />
     </div>

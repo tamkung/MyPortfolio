@@ -10,76 +10,87 @@ import IMG6 from "../../assets/portfolio6.jpg";
 const data = [
   {
     id: 1,
-    image: IMG1,
-    title: "Crypto Currency Dashboard & Financial Visualization",
+    image: IMG4,
+    title: "ปล่อย Share",
+    body: "React + Express + MySQL",
     github: "https://github.com",
-    demo: "https://dribbble.com/shots/16673715-Crypto-currency-dashboards-and-financial-data-visualization",
+    demo: "https://ploishare.vercel.app/",
   },
   {
     id: 2,
-    image: IMG2,
-    title: "Charts templates & infographics in Figma",
+    image: IMG1,
+    title: "KMUTNB Covid-App Project",
+    body: "Flutter + Firebase",
     github: "https://github.com",
-    demo: "https://dribbble.com/shots/16580766-Orion-UI-kit-Charts-templates-infographics-in-Figma",
+    demo: null,
   },
   {
     id: 3,
-    image: IMG3,
-    title: "Figma dashboard UI kit for data design web apps",
+    image: IMG2,
+    title: "Shabu-App Mini Project",
+    body: "Flutter + Firebase",
     github: "https://github.com",
-    demo: "https://dribbble.com/shots/17290917-Eclipse-Figma-dashboard-UI-kit-for-data-design-web-apps",
+    demo: null,
   },
   {
     id: 4,
-    image: IMG4,
-    title: "Maintaining tasks and tracking progress",
+    image: IMG3,
+    title: "TWT Computer",
+    body: "HTML + Bootstrap 5 + Firebase",
     github: "https://github.com",
-    demo: "https://dribbble.com/shots/1695582-Maintaining-tasks-and-tracking-progress",
+    demo: "https://final-waragorn.web.app/",
   },
-  {
-    id: 5,
-    image: IMG5,
-    title: "Charts templates & infographics in Figma",
-    github: "https://github.com",
-    demo: "https://dribbble.com/shots/16541289-Orion-UI-kit-Charts-templates-infographics-in-Figma",
-  },
-  {
-    id: 6,
-    image: IMG6,
-    title: "Charts templates & infographics in Figma",
-    github: "https://github.com",
-    demo: "https://dribbble.com/shots/15887665-Orion-UI-kit-Charts-templates-infographics-in-Figma",
-  },
+  // {
+  //   id: 5,
+  //   image: IMG5,
+  //   title: "Prototype ปล่อย Share",
+  //   body: "Figma",
+  //   github: null,
+  //   demo: "https://www.figma.com/proto/WnmnHwrrPldJdf5ik8eNjr/%E0%B8%9B%E0%B8%A5%E0%B9%88%E0%B8%AD%E0%B8%A2-Share?page-id=0%3A1&node-id=20%3A2&viewport=5027%2C440%2C0.69&scaling=scale-down&starting-point-node-id=20%3A2&show-proto-sidebar=1",
+  // },
 ];
 
 const Portfolio = () => {
   return (
     <section id="portfolio">
-      <h5>My Recent Work</h5>
+      {/* <h5>My Recent Work</h5> */}
       <h2>Portfolio</h2>
       <div
         className="container 
       portfolio__container"
       >
-        {data.map(({ id, image, title, github, demo }) => {
+        {data.map(({ id, image, title, body, github, demo }) => {
           return (
             <article className="portfolio__item" key={id}>
               <div className="portfolio__item-image">
                 <img src={image} alt={title} />
               </div>
-              <h3>{title}</h3>
+              <h2>{title}</h2>
+              <h4
+                style={{
+                  paddingBottom: "15px",
+                  paddingTop: "10px",
+                  color: "lightgray",
+                }}
+              >
+                {body}
+              </h4>
               <div className="portfolio__item-cta">
-                <a href={github} className="btn">
-                  Github
-                </a>
-                <a
-                  href={demo}
-                  className="btn btn-primary"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Live Demo
-                </a>
+                {github === null ? null : (
+                  <a href={github} className="btn">
+                    Github
+                  </a>
+                )}
+                {demo === null ? null : (
+                  <a
+                    href={demo}
+                    className="btn btn-primary"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Live Demo
+                  </a>
+                )}
               </div>
             </article>
           );

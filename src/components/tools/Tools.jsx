@@ -5,7 +5,7 @@ import { BiCheck } from "react-icons/bi";
 const Tools = () => {
   return (
     <section id="tools">
-      <h5>What I Offer</h5>
+      {/* <h5>What I Offer</h5> */}
       <h2>Tools</h2>
       <div className="container services__container">
         <article className="service">
@@ -30,15 +30,15 @@ const Tools = () => {
           <ul className="service__list">
             <li>
               <BiCheck className="service__list-icon" />
-              <p>HTML</p>
+              <p>Visual Studio Code</p>
             </li>
             <li>
               <BiCheck className="service__list-icon" />
-              <p>JavaScript</p>
+              <p>Google Site</p>
             </li>
             <li>
               <BiCheck className="service__list-icon" />
-              <p>React</p>
+              <p>Wix</p>
             </li>
           </ul>
         </article>
