@@ -15,23 +15,25 @@ const data = [
     image: Cer1,
     name: "Get started with Azure Functions",
     review: "Born to Dev",
+    size: "100%",
   },
   {
     image: Cer2,
     name: "Sustainability Summit",
     review: "Google Cloud",
+    size: "60%",
   },
   {
     image: Cer3,
-    name: "Kwame Despite",
-    review:
-      "Lorem ipsum, consectetur adipisicing elit. Modi quidem nobis omnis beatae incidunt quibusdam laudantium accusamus quasi, aut reiciendis eum dolore eaque optio nemo. Modi porro facere atque non.",
+    name: "Data Analyst",
+    review: "Thailand Professional Qualification Institute",
+    size: "60%",
   },
   {
     image: null,
     name: "Nana Ama McBrown",
-    review:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi quidem nobis omnis beatae incidunt quibusdam laudantium accusamus quasi, aut reiciendis eum dolore eaque optio nemo.",
+    review: "Lorem ipsum dolor sit amet, consectetur ",
+    size: "100%",
   },
 ];
 
@@ -47,11 +49,15 @@ const Certificate = () => {
         slidesPerView={1}
         pagination={{ clickable: true }}
       >
-        {data.map(({ image, name, review }, index) => {
+        {data.map(({ image, name, review, size }, index) => {
           return (
             <SwiperSlide key={index} className="testimonial">
               <div className="client__avatar">
-                <img src={image !== null ? image : No_image} alt={name} />
+                <img
+                  src={image !== null ? image : No_image}
+                  alt={name}
+                  style={{width: size}}
+                />
               </div>
               <h3 style={{ paddingTop: "10px" }} className="client__name">
                 {name}

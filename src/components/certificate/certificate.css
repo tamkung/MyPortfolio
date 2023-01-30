@@ -4,12 +4,15 @@
 }
 
 .client__avatar {
-  /* width: 4rem; */
-  /* aspect-ratio: 1/1; */
-  /* overflow: hidden; */
-  /* border-radius: 50%; */
-  /* margin: 0 auto 1rem; */
-  border: 0.4rem solid var(--color-primary-variant);
+  /* width: 4rem;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto 1rem; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.5rem solid var(--color-primary-variant);
 }
 
 .testimonial {
