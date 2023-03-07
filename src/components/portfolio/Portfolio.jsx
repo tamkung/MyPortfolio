@@ -10,14 +10,16 @@ const data = [
     body: "React + Express + MySQL",
     github: "https://github.com",
     demo: "https://ploishare.vercel.app/",
+    pdf: null,
   },
   {
     id: 2,
     image: null,
     title: "KMUTNB Covid-App Project",
-    body: "Flutter + Firebase",
+    body: "Flutter + Firebase + G Maps API",
     github: "https://github.com",
     demo: null,
+    pdf: null,
   },
   {
     id: 3,
@@ -26,6 +28,7 @@ const data = [
     body: "Flutter + Firebase",
     github: "https://github.com",
     demo: null,
+    pdf: null,
   },
   {
     id: 4,
@@ -34,6 +37,16 @@ const data = [
     body: "HTML + Bootstrap 5 + Firebase",
     github: "https://github.com",
     demo: "https://final-waragorn.web.app/",
+    pdf: null,
+  },
+  {
+    id: 5,
+    image: null,
+    title: "Automatic Dog Feeding",
+    body: "Arduino + Firebase + Java",
+    github: null,
+    demo: null,
+    pdf: 'null',
   },
 ];
 
@@ -46,7 +59,7 @@ const Portfolio = () => {
         className="container 
       portfolio__container"
       >
-        {data.map(({ id, image, title, body, github, demo }) => {
+        {data.map(({ id, image, title, body, github, demo, pdf }) => {
           return (
             <article className="portfolio__item" key={id}>
               <div className="portfolio__item-image">
@@ -64,7 +77,11 @@ const Portfolio = () => {
               </h4>
               <div className="portfolio__item-cta">
                 {github === null ? null : (
-                  <a href={github} className="btn">
+                  <a
+                    href={github}
+                    className="btn"
+                    target="_blank"
+                  >
                     Github
                   </a>
                 )}
@@ -78,6 +95,16 @@ const Portfolio = () => {
                     Live Demo
                   </a>
                 )}
+                {pdf === null ? null : (
+                  <a
+                    href={pdf}
+                    className="btn btn-primary"
+                    target="_blank"
+                  >
+                    PDF
+                  </a>
+                )}
+
               </div>
             </article>
           );

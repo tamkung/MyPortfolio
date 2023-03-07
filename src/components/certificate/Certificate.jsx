@@ -4,6 +4,7 @@ import No_image from "../../assets/No_image.png";
 import Cer1 from "../../assets/cer1.png";
 import Cer2 from "../../assets/cer2.jpg";
 import Cer3 from "../../assets/cer3.png";
+import Cer4 from "../../assets/cer4.png";
 
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -30,9 +31,9 @@ const data = [
     size: "60%",
   },
   {
-    image: null,
-    name: "Nana Ama McBrown",
-    review: "Lorem ipsum dolor sit amet, consectetur ",
+    image: Cer4,
+    name: "CWIE Day",
+    review: "KMUTNB",
     size: "100%",
   },
 ];
